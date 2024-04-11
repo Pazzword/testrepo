@@ -1,20 +1,20 @@
 const Orders = [
     {
-        productName: 'JavaScript Tutorial',
+        productName: 'Service Manager',
         productNumber: '85743',
-        paymentStatus: 'Due',
-        status: 'Pending'
+        paymentStatus: '£44,000 + bonus',
+        status: 'Active'
     },
     {
-        productName: 'CSS Full Course',
+        productName: 'PPC Team Leader',
         productNumber: '97245',
-        paymentStatus: 'Refunded',
-        status: 'Declined'
+        paymentStatus: 'Competitive',
+        status: 'Closed'
     },
     {
-        productName: 'Flex-Box Tutorial',
+        productName: 'Complaint Handler',
         productNumber: '36452',
-        paymentStatus: 'Paid',
+        paymentStatus: '£33, 500',
         status: 'Active'
     },
 ]

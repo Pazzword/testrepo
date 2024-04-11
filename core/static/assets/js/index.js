@@ -35,9 +35,9 @@ Orders.forEach(order => {
 });
 
 new Chart(chartView, {
-    type: 'doughnut',
+    type: 'polarArea',
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        labels: ['ENT', 'Cardiology', 'Opthamology', 'Orthopedicsc', 'Gyniecology', 'ADHD'],
         datasets: [{
             label: 'Growth Revenue',
             data: [65, 59, 80, 81, 56, 55],
