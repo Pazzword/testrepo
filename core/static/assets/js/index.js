@@ -37,7 +37,7 @@ Orders.forEach(order => {
 new Chart(chartView, {
     type: 'polarArea',
     data: {
-        labels: ['ENT', 'Cardiology', 'Opthamology', 'Orthopedicsc', 'Gyniecology', 'ADHD'],
+        labels: ['ENT', 'Cardiology', 'Ophthamology', 'Orthopedicsc', 'Gyniecology', 'ADHD'],
         datasets: [{
             label: 'Growth Revenue',
             data: [65, 59, 80, 81, 56, 55],
