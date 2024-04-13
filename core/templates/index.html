@@ -16,6 +16,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>MODALITY PORTAL | Anzor</title>
 </head>
@@ -1030,8 +1032,77 @@ main .recent-orders a{
 
 </div>
 
-  <script src="{% static 'js/orders.js' %}"></script>
-  <script src="{% static 'js/index.js' %}"></script>
+  <script>
+    const Orders = [
+    {
+        productName: 'Service Manager',
+        productNumber: '85743',
+        paymentStatus: '£44,000 + bonus',
+        status: 'Active'
+    },
+    {
+        productName: 'PPC Team Leader',
+        productNumber: '97245',
+        paymentStatus: 'Competitive',
+        status: 'Closed'
+    },
+    {
+        productName: 'Complaint Handler',
+        productNumber: '36452',
+        paymentStatus: '£33, 500',
+        status: 'Active'
+    },
+];
+new Chart(chartView, {
+    type: 'polarArea',
+    data: {
+        labels: ['ENT', 'Cardiology', 'Ophthamology', 'Orthopedicsc', 'Gyniecology', 'ADHD'],
+        datasets: [{
+            label: 'Growth Revenue',
+            data: [65, 59, 80, 81, 56, 55],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+const chartView = document.getElementById('total-views-chart');
+const darkMode = document.querySelector('.dark-mode');
+
+menuBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'none';
+});
+
+darkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode-variables');
+    darkMode.querySelector('span:nth-child(1)').classList.toggle('active');
+    darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
+})
+
+Orders.forEach(order => {
+    const tr = document.createElement('tr');
+    const trContent = `
+        <td>${order.productName}</td>
+        <td>${order.productNumber}</td>
+        <td>${order.paymentStatus}</td>
+        <td class="${order.status === 'Declined' ? 'danger' : order.status === 'Pending' ? 'warning' : 'primary'}">${order.status}</td>
+        <td class="primary">Details</td>
+    `;
+    tr.innerHTML = trContent;
+    document.querySelector('table tbody').appendChild(tr);
+});
+  </script>
+
 
 </body>
 
