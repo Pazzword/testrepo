@@ -121,8 +121,8 @@ USE_TZ = True
 
 
 
-STATIC_URL = 'static/'
-
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 STATIC_ROOT = 'adtest231.pythonanywhere.com/core/static'
 # Default primary key field type
