@@ -124,10 +124,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'core/static'),
+    os.path.join(BASE_DIR, '/core/static'),
 ]
 
-STATIC_ROOT = '/home/adtest231/adtest231.pythonanywhere.com/core/static'
+#STATIC_ROOT = '/home/adtest231/adtest231.pythonanywhere.com/core/static'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
